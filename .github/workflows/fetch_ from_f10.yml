@@ -19,7 +19,7 @@ jobs:
         pip install selenium
   
     - name: Run script
-      run: python get_f10 > a.xlsx
+      run: python get_f10.py > a.xlsx
     - name: Commit and push changes
       run: |
         git config --global user.name 'errorduplicator'
