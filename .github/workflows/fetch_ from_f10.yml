@@ -19,6 +19,7 @@ jobs:
         pip install selenium
   
     - name: Run script
+      working-directory: ./news_acqusition_project
       run: python get_f10.py > a.xlsx
     - name: Commit and push changes
       run: |
