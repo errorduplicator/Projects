@@ -7,8 +7,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: browser-actions/setup-edge@v1
-    
+    - uses: nanasess/setup-chromedriver@v2
+
+    - run: |
+        export DISPLAY=:99
+        chromedriver --url-base=/wd/hub 
+      
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
