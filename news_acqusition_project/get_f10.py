@@ -32,7 +32,7 @@ for line in range(5362):
         next_page = page_links[-1]
         elements = m_box_subnews.find_elements(By.CLASS_NAME, "client")
         for element in elements:
-            WebDriverWait(driver, 30, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(element))
+            WebDriverWait(driver, 40, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(element))
             event_name = element.text
             keywords = ['证监会', '中国证券监督管理委员会', '罚', '退市']
             combined_pattern = '|'.join(keywords)
