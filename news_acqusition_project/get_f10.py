@@ -13,7 +13,7 @@ events = []
 links = []
 data = {'event' : events,
         'link' : links}
-driver = webdriver.Edge()
+driver = webdriver.Chrome()
 lines = list_.readlines()
 for line in range(5362):    
     code = lines[line]
