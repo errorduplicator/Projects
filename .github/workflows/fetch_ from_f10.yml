@@ -21,10 +21,12 @@ jobs:
     - name: Run script
       working-directory: ./news_acqusition_project
       run: python get_f10.py > a.xlsx
+    
     - name: Commit and push changes
+      working-directory: ./news_acqusition_project
       run: |
         git config --global user.name 'errorduplicator'
         git config --global user.email 'friedrichswun@gmail.com'
-        git add nodes.txt
-        git commit -m "Update nodes.txt"
+        git add a.xlsx
+        git commit -m "Update xlsx"
         git push
