@@ -15,11 +15,11 @@ data = {'event' : events,
         'link' : links}
 driver = webdriver.Chrome()
 lines = list_.readlines()
-for line in range(5362):    
+for line in range(5362):
     code = lines[line]
     driver.get(''.join(['https://basic.10jqka.com.cn/', code, '/news.html']))
 
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(20)
     m_box_subnews = driver.find_element(By.ID, "pub")
     page_link_box = m_box_subnews.find_element(By.ID, "splpager_page")
     page_links = page_link_box.find_elements(By.CLASS_NAME, "page-link")
