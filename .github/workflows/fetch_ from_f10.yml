@@ -21,7 +21,7 @@ jobs:
   
     - name: Run script
       working-directory: ./news_acqusition_project
-      run: python get_f10.py > sace.txt, a.xlsx
+      run: python get_f10.py > save.txt, a.xlsx
     
     - name: Commit and push changes
       working-directory: ./news_acqusition_project
