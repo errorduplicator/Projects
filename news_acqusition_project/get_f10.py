@@ -34,7 +34,8 @@ if len(cached)>2:
                 events.append(cached[l])
             else:
                 links.append(cached[l])
-        pd
+        df = pd.DataFrame(data)
+        df.to_excel('a.xlsx', index=False, header=False)
         exit()
 for line in range(5362):
     if end-start < 1800:
