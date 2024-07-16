@@ -8,8 +8,8 @@ import time
 import re
 import pandas as pd
 
-list_ = open('list.txt','r')
-save = open('save.txt', 'r+')
+list_ = open('list.txt','r') # open files
+save = open('save.txt', 'r+') # open files
 start = time.time()
 end = 0.0
 events = []
@@ -20,6 +20,7 @@ driver = webdriver.Chrome()
 lines = list_.readlines()
 for line in range(5362):
     if end < 1800:
+        save.readlines()
         code = lines[line]
         driver.get(''.join(['https://basic.10jqka.com.cn/', code, '/news.html']))
 
