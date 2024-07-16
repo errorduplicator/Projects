@@ -50,7 +50,7 @@ for line in range(5362):
         page_links = page_link_box.find_elements(By.CLASS_NAME, "page-link")
         next_page = page_links[-1]
         t = 0
-        if t < 1 and cached:
+        if t < 1 and len(cached)>2:
             page = cached[-2]
         else:
             page = 1
