@@ -74,7 +74,7 @@ for line in range(5362):
             WebDriverWait(driver, 40, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(next_page))
             next_page.click()
             page += 1
-        time.sleep(3)
+            time.sleep(3)
     else:
         with open('save.txt', 'r') as file:
             ls = file.readlines() # Remove the last two lines
