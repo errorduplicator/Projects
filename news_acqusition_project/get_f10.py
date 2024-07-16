@@ -9,7 +9,7 @@ import re
 import pandas as pd
 
 list_ = open('list.txt','r') # open files
-save = open('save.txt', 'r+',encoding='utf-8') # open files
+save = open('save.txt', 'r+',encoding='gbk') # open files
 driver = webdriver.Edge() # start browser
 start = time.time() # start timing
 end = 0.0
