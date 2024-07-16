@@ -16,12 +16,12 @@ end = 0.0
 page = 0
 lines = list_.readlines()
 cached = save.readlines()
-if cached:
+if len(cached)>2:
     if cached[-2]==5362 and cached[-1]==20:
         events = []
         links = []
         data = {'event' : events,
-        'link' : links}
+                'link' : links}
         with open('save.txt', 'r') as file:
             ls = file.readlines() # Remove the last two lines
             ls = ls[:-2] # Write the remaining lines back to the file
@@ -34,6 +34,7 @@ if cached:
                 events.append(cached[l])
             else:
                 links.append(cached[l])
+        pd
         exit()
 for line in range(5362):
     if end-start < 1800:
