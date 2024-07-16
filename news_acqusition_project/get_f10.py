@@ -63,7 +63,7 @@ for line in range(5362):
             next_page = page_links[-1]
             elements = m_box_subnews.find_elements(By.CLASS_NAME, "client")
             for element in elements:
-                WebDriverWait(driver, 40, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(element))
+                WebDriverWait(driver, 60, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(element))
                 event_name = element.text
                 keywords = ['证监会', '中国证券监督管理委员会', '罚', '退市']
                 combined_pattern = '|'.join(keywords)
@@ -73,7 +73,7 @@ for line in range(5362):
                     save.write(event_name + '\n')
                     save.write(link + '\n')
             current_time = time.time()
-            WebDriverWait(driver, 40, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(next_page))
+            WebDriverWait(driver, 60, ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)).until(EC.element_to_be_clickable(next_page))
             next_page.click()
             page += 1
             time.sleep(3)
