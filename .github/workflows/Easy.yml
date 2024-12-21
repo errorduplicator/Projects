@@ -30,4 +30,4 @@ jobs:
         git config user.email "github-actions@github.com"
         git add .
         git commit -m "Automated changes with Git LFS"
-        git push https://x-access-token:${GH_PAT}@github.com/<your-username>/<your-repo>.git
+        git push https://x-access-token:${GH_PAT}@github.com/errorduplicator/Projects.git
