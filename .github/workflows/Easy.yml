@@ -22,6 +22,10 @@ jobs:
         git lfs track "*.exe"
         git add .gitattributes
 
+    - name: Run script
+      working-directory: ./Account Re-Acquisition
+      run: python main.py
+
     - name: Commit and push changes
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
