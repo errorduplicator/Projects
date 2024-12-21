@@ -16,10 +16,18 @@ jobs:
     - name: Run EXE file
       run: .\EasiNoteSetup_5.2.4.8615_seewo.exe
 
+    - name: Install Git LFS
+      run: |
+        git lfs install
+        git lfs track "*.exe"
+        git add .gitattributes
+
     - name: Commit and push changes
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
         git add .
-        git commit -m "Automated changes from workflow"
-        git push
+        git commit -m "Automated changes with Git LFS"
+        git push https://x-access-token:${GH_PAT}@github.com/<your-username>/<your-repo>.git
